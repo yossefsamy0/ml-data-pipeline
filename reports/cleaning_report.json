@@ -1,0 +1,39 @@
+{
+  "rows_in": 17,
+  "rows_out": 14,
+  "duplicate_rows_removed": 2,
+  "missing_before": {
+    "customer": 1,
+    "quantity": 1,
+    "unit_price": 1
+  },
+  "missing_after": {
+    "revenue": 2
+  },
+  "missing_customer_filled": 1,
+  "missing_quantity_imputed": 1,
+  "quantity_imputed_value": 2.0,
+  "negative_quantity_fixed": 1,
+  "missing_price_rows_dropped": 1,
+  "nonpositive_price_flagged": 2,
+  "future_dates_flagged": 1,
+  "dates_parsed_by_format": {
+    "%Y-%m-%d": 14,
+    "%d/%m/%Y": 1
+  },
+  "dates_unparsed": 0,
+  "text_values_normalised": 5,
+  "price_outliers_flagged": 1,
+  "outlier_bounds": [
+    -98.25,
+    225.75
+  ],
+  "notes": [
+    "Ambiguous dates were resolved day-first (Egypt/Gulf convention).",
+    "Missing prices were dropped because they cannot be recovered from the row.",
+    "Missing quantities were imputed with the median of valid quantities.",
+    "Negative quantities were converted to absolute values and kept.",
+    "Rows with a non-positive price are kept but excluded from revenue.",
+    "Future dates are flagged, not removed, because they may be real pre-orders."
+  ]
+}
